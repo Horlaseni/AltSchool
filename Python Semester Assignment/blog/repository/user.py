@@ -12,8 +12,6 @@ def create(request: schema.User,db:Session):
   db.commit()
   db.refresh(new_user)
   return new_user
-  
-  # return request
 
 
 def show(id:int,db:Session):

@@ -3,9 +3,7 @@ from .database import Base
 # from sqlalchemy.orm import Mapped
 from sqlalchemy.orm import relationship
 
-
-
-class Blog(Base):
+class Blog:
   __tablename__ = 'blogs'
   id = Column(Integer, primary_key=True, index=True)
   title = Column(String)
@@ -14,8 +12,6 @@ class Blog(Base):
 
 
   creator = relationship("User", back_populates="blogs")
-
-
 
 class User(Base):
   __tablename__ = 'users'

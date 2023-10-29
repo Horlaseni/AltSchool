@@ -41,3 +41,6 @@ def show(id:int,db: Session):
     if not blog:
       raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=f"Blog with the id {id} is not available")
     return blog 
+  
+  #complete oauth.py 
+  #remember to call fola back
